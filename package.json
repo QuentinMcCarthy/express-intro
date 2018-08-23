@@ -1,0 +1,23 @@
+{
+  "name": "express-intro",
+  "version": "0.0.1",
+  "description": "Intro to Express",
+  "main": "app.js",
+  "scripts": {
+    "dev:server" : "nodemon -L index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuentinMcCarthy/express-intro.git"
+  },
+  "keywords": [
+    "express",
+    "node"
+  ],
+  "author": "Quentin McCarthy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QuentinMcCarthy/express-intro/issues"
+  },
+  "homepage": "https://github.com/QuentinMcCarthy/express-intro#readme"
+}
