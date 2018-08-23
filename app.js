@@ -12,6 +12,8 @@ app.use(express.static(`./public`));
 
 app.use(`/bootstrapCSS`, express.static(path.join(__dirname, `node_modules/bootstrap/dist/css/bootstrap.min.css`)));
 
+app.use(`/jquery`, express.static(path.join(__dirname, `node_modules/jquery/dist/jquery.min.js`)));
+
 // app.get(`/`, (req, res) => res.send(`Hello World!`));
 // app.get(`/`, function(req,res){
 // 	res.sendFile(`${__dirname}/public/index.html`);
