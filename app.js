@@ -10,7 +10,8 @@ app.use(function(req,res,next){
 
 app.use(express.static(`./public`));
 
-app.use(`/bootstrapCSS`, express.static(path.join(__dirname, `node_modules/bootstrap/dist/css/bootstrap.min.css`)));
+// app.use(`/bootstrapCSS`, express.static(path.join(__dirname, `node_modules/bootstrap/dist/css/bootstrap.min.css`)));
+app.use(`/bootstrap`, express.static(path.join(__dirname, `node_modules/bootstrap/dist`)));
 app.use(`/jquery`, express.static(path.join(__dirname, `node_modules/jquery/dist/jquery.min.js`)));
 
 // app.get(`/`, (req, res) => res.send(`Hello World!`));
