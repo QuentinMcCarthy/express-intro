@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const twitter = require("twitter");
+const Twitter = require("twitter");
 const config = require("./config");
 
 const app = express();
@@ -28,11 +28,30 @@ app.use(`/jquery`, express.static(path.join(__dirname, `node_modules/jquery/dist
 // 	res.sendFile(`${__dirname}/public/index.html`);
 // });
 
-app.get(`/`, (req, res) => res.sendFile(`${__dirname}/public/index.html`));
+app.get(`/`, (req,res) => res.sendFile(`${__dirname}/public/index.html`));
 
 // app.get(`/about/`, function(req,res){
 // 	res.sendFile(`${__dirname}/public/about.html`);
 // })
+
+// app.get(`/`, (req,res) => res.sendFile(`${__dirname}/public/about.html`));
+
+app.get(`/search=:term`, function(req,res){
+	var term = req.params.term;
+		params = {
+			q: term,
+			count: 1
+		}
+
+	// res.json(term);
+	// console.log(term);
+
+	 client.get(`search/tweets`, params, function(err,tweet,twitterRes){
+		 if(!err){
+			 res.json(tweet);
+		 }
+	 });
+});
 
 // app.post();
 
