@@ -6,10 +6,16 @@ app.use(function(req,res,next){
 	next();
 });
 
+app.use(express.static(`./public`));
+
 // app.get(`/`, (req, res) => res.send(`Hello World!`));
 app.get(`/`, function(req,res){
 	res.sendFile(`${__dirname}/public/index.html`);
 });
+
+app.get(`/about/`, function(req,res){
+	res.sendFile(`${__dirname}/public/about.html`);
+})
 
 // app.post();
 
