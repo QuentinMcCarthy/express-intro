@@ -4,8 +4,8 @@
   "description": "Intro to Express",
   "main": "app.js",
   "scripts": {
-	"test": "echo \"Error: no test specified\" && exit 1",
-    "dev:server": "nodemon -L index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:server": "nodemon -L app.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/QuentinMcCarthy/express-intro/issues"
   },
-  "homepage": "https://github.com/QuentinMcCarthy/express-intro#readme"
+  "homepage": "https://github.com/QuentinMcCarthy/express-intro#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
