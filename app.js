@@ -1,7 +1,16 @@
 const express = require("express");
 const path = require("path");
+const twitter = require("twitter");
+const config = require("./config");
 
 const app = express();
+
+var client = new Twitter({
+	consumer_key: config.TConsumerKey,
+	consumer_secret: config.TConsumerKeySecret,
+	access_token_key: config.TAccessToken,
+	access_token_secret: config.TAccessTokenSecret
+});
 
 app.use(function(req,res,next){
 	console.log(`${req.method} request for ${req.url}`);
