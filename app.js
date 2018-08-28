@@ -28,7 +28,7 @@ app.use(`/jquery`, express.static(path.join(__dirname, `node_modules/jquery/dist
 // 	res.sendFile(`${__dirname}/public/index.html`);
 // });
 
-app.get(`/`, (req,res) => res.sendFile(`${__dirname}/public/index.html`));
+app.get(`/`, (req,res) => res.sendFile(`${__dirname}/public/home.html`));
 
 // app.get(`/about/`, function(req,res){
 // 	res.sendFile(`${__dirname}/public/about.html`);
